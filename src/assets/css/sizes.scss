@@ -1,0 +1,16 @@
+.bgm_w-100{
+	width: 100%;
+}
+
+.bgm_h-100vh{
+	height: 100vh;
+}
+
+/*
+	WIDTHS
+*/
+@for $i from 1 through 20 {
+	.bgm_w-#{$i * 5} {
+		width: $i * 5% !important;
+	}
+}

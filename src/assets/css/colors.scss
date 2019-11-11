@@ -1,0 +1,47 @@
+/*
+    Variables
+*/
+
+$color_white: #fff;
+$color_black: #000;
+$color_grey: #a1a1a1;
+
+$bgm_colors: (
+    "white": $color_white,
+    "black": $color_black,
+    "grey": $color_grey
+);
+
+/*
+    Backgrounds
+    Example of class: bgm_bg-white, bgm_color-black
+*/
+
+@each $bgm_colors_key, $bgm_colors_value in $bgm_colors {
+    .bgm_bg-#{$bgm_colors_key} {
+        background-color: $bgm_colors_value !important;
+    }
+
+    .bgm_color-#{$bgm_colors_key} {
+        color: $bgm_colors_value !important;
+    }
+
+    @for $i from 1 through 3 {
+        .bgm_border-#{$bgm_colors_key}-#{$i} {
+            border: $i+0px solid $bgm_colors_value !important;
+        }
+        .bgm_border-t-#{$bgm_colors_key}-#{$i} {
+            border-top: $i+0px solid $bgm_colors_value !important;
+        }
+        .bgm_border-b-#{$bgm_colors_key}-#{$i} {
+            border-bottom: $i+0px solid $bgm_colors_value !important;
+        }
+        .bgm_border-r-#{$bgm_colors_key}-#{$i} {
+            border-right: $i+0px solid $bgm_colors_value !important;
+        }
+        .bgm_border-l-#{$bgm_colors_key}-#{$i} {
+            border-left: $i+0px solid $bgm_colors_value !important;
+        }
+    }
+
+}

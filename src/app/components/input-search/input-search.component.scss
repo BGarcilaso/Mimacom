@@ -1,0 +1,26 @@
+@import '../../../assets/css/colors.scss';
+app-bgm-input-search {
+    .bgm_input {
+        padding: .5em 1em;
+    }
+
+    button {
+        cursor: pointer;
+        background-color: $color_white;
+        color: $color_black;
+        -webkit-transition: background-color 1s; 
+        -moz-transition: background-color 1s; 
+        -ms-transition: background-color 1s; 
+        -o-transition: background-color 1s; 
+        transition: background-color 1s; 
+        &:hover{
+            background-color: $color_black;
+            color: $color_white;
+            -webkit-transition: background-color 1s; 
+            -moz-transition: background-color 1s; 
+            -ms-transition: background-color 1s; 
+            -o-transition: background-color 1s; 
+            transition: background-color 1s; 
+        }
+    }
+}

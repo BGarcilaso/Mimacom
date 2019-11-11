@@ -1,0 +1,60 @@
+// ELEMENTOS COMUNES
+@import '../assets/css/colors.scss';
+
+.bgm_input {
+	border: 2px solid black;
+    padding: .2em;
+    font-size: 14px;
+}
+
+.go_to_top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    div {
+        background-color: $color_white;
+        color: $color_black;
+        -webkit-transition: background-color 1s; 
+        -moz-transition: background-color 1s; 
+        -ms-transition: background-color 1s; 
+        -o-transition: background-color 1s; 
+        transition: background-color 1s; 
+        &:hover {
+            background-color: $color_black;
+            color: $color_white;
+            -webkit-transition: background-color 1s; 
+            -moz-transition: background-color 1s; 
+            -ms-transition: background-color 1s; 
+            -o-transition: background-color 1s; 
+            transition: background-color 1s; 
+        }
+    }
+}
+
+.bgm_h-100vh{
+    -webkit-transition: height 1s; 
+    -moz-transition: height 1s; 
+    -ms-transition: height 1s; 
+    -o-transition: height 1s; 
+    transition: height 1s; 
+    &.bgm_animation_height{
+        -webkit-transition: height 1s; 
+        -moz-transition: height 1s; 
+        -ms-transition: height 1s; 
+        -o-transition: height 1s; 
+        transition: height 1s;  
+        height: 200px !important;
+    }
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.category{
+    &:hover{
+        border-bottom: 1px dashed black;
+    }
+}
+
+

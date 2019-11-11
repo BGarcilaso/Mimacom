@@ -1,0 +1,11 @@
+<div class="bgm_d-flex bgm_justify-between">
+    <input class="bgm_input bgm_w-75 bgm_border-black-1 bgm_color-black bgm_font-m" placeholder="Search something..." value="searchText" [(ngModel)]="searchText"  (focus)="inputFocus()" (keydown)="onKeydown($event)">
+    <button class="bgm_w-15 bgm_border-black-1" (click)="searchGifs()" >Search</button>
+</div>
+
+<div *ngIf="listadoGifs && listadoGifs.length > 0 && false">
+    <div *ngFor="let gif of listadoGifs">
+        <img [src]="gif.images.downsized.url"/>
+        <p>{{gif.id}}</p>
+    </div>
+</div>

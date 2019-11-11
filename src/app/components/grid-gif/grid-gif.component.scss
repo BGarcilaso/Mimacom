@@ -1,0 +1,107 @@
+@import '../../../assets/css/colors.scss';
+
+app-bgm-grid-gif{
+    .gif_column {
+        &.showDetail{
+            padding-bottom: 27rem;;
+        }
+        .gif_container{
+            margin: 1em;
+            position: relative;
+            height: 100%;
+            max-height: 200px;
+            min-height: 200px;
+            &.stickerContainer{
+                border: 1px solid black;
+            }
+            
+            img{
+                position: absolute;
+                width: 100%;
+                -o-object-fit: cover;
+                object-fit: cover;
+                height: 100%;
+            }
+        }
+
+        .detail_container {
+            background-color: white;
+            left: 0;
+
+            .detail {
+                border: 1px dashed black;
+                height: 23rem;
+                img {
+                    max-height: 20rem;
+                }
+    
+                .close {
+                    top: 2rem;
+                    right: 2rem;
+                }
+
+                .favourite {
+                    bottom: 1rem;
+                    right: 1rem;
+                }
+
+                .detail_avatar_container {
+                    .image_avatar {
+                        width: 5rem;
+                        height: 5rem;
+                        
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    a {
+                        text-decoration: none;
+                        &:hover {
+                            border-bottom: 1px dashed black;
+                        }
+                    }
+                }
+                .share_container {
+                    width: 2rem;
+                    height: 2rem;
+                    background-color: $color_white;
+                    color: $color_black;
+                    -webkit-transition: background-color 1s; 
+                    -moz-transition: background-color 1s; 
+                    -ms-transition: background-color 1s; 
+                    -o-transition: background-color 1s; 
+                    transition: background-color 1s; 
+                    &:hover {
+                        background-color: $color_black;
+                        color: $color_white;
+                        -webkit-transition: background-color 1s; 
+                        -moz-transition: background-color 1s; 
+                        -ms-transition: background-color 1s; 
+                        -o-transition: background-color 1s; 
+                        transition: background-color 1s; 
+
+                        a {
+                            i{
+                                color: $color_white !important;
+                            }
+                        }
+                    }
+                    a{
+                        &:hover {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .more_button{
+        &:hover{
+            text-decoration: underline;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+    }
+}

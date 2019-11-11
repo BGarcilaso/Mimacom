@@ -1,0 +1,107 @@
+.bgm_p-relative {
+    position: relative;
+}
+
+.bgm_p-absolute {
+    position: absolute;
+}
+
+.bgm_d-flex {
+  display: flex;
+}
+
+.bgm_flex-column {
+    flex-direction: column;
+}
+
+.bgm_flex-wrap {
+  flex-wrap: wrap;
+}
+
+.bgm_justify-start {
+  justify-content: start;
+}
+
+.bgm_justify-end {
+  justify-content: flex-end;
+}
+
+.bgm_justify-center {
+  justify-content: center;
+}
+
+.bgm_justify-between {
+  justify-content: space-between;
+}
+
+.bgm_align-center {
+  align-items: center;
+}
+
+$sizes: (
+    "0_5": .5,
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+);
+
+.bgm_m-0{
+    margin: 0 !important;
+}
+.bgm_p-0{
+    padding: 0 !important;
+}
+
+@each $bgm_size_key, $bgm_size_value in $sizes {
+    /*
+        MARGIN
+    */
+    .bgm_m-y-#{$bgm_size_key} {
+        margin: $bgm_size_value+0rem 0 !important;
+    }
+    .bgm_m-x-#{$bgm_size_key} {
+        margin: 0 $bgm_size_value+0rem !important;
+    }
+    .bgm_m-#{$bgm_size_key} {
+        margin: $bgm_size_value+0rem !important;
+    }
+    .bgm_m-t-#{$bgm_size_key} {
+        margin-top: $bgm_size_value+0rem !important;
+    }
+    .bgm_m-b-#{$bgm_size_key} {
+        margin-bottom: $bgm_size_value+0rem !important;
+    }
+    .bgm_m-l-#{$bgm_size_key} {
+        margin-left: $bgm_size_value+0rem !important;
+    }
+    .bgm_m-r-#{$bgm_size_key} {
+        margin-right: $bgm_size_value+0rem !important;
+    }
+
+    /*
+        PADDING
+    */
+    .bgm_p-y-#{$bgm_size_key} {
+        padding: $bgm_size_value+0rem 0 !important;
+    }
+    .bgm_p-x-#{$bgm_size_key} {
+        padding: 0 $bgm_size_value+0rem !important;
+    }
+    .bgm_p-#{$bgm_size_key} {
+        padding: $bgm_size_value+0rem !important;
+    }
+    .bgm_p-t-#{$bgm_size_key} {
+        padding-top: $bgm_size_value+0rem !important;
+    }
+    .bgm_p-b-#{$bgm_size_key} {
+        padding-bottom: $bgm_size_value+0rem !important;
+    }
+    .bgm_p-l-#{$bgm_size_key} {
+        padding-left: $bgm_size_value+0rem !important;
+    }
+    .bgm_p-r-#{$bgm_size_key} {
+        padding-right: $bgm_size_value+0rem !important;
+    }
+}

@@ -1,0 +1,61 @@
+<div class="bgm_d-flex bgm_flex-wrap bgm_justify-start bgm_p-relative">
+    <div *ngFor="let gif of gifCollection" class="bgm_w-25 gif_column {{gif.showDetail ? 'showDetail' : ''}}">
+        <div class="gif_container {{!isGif ? 'stickerContainer' : ''}} ">
+                <img [src]="gif.images.downsized.url" class="pointer" (click)="showDetail(gif)"/>
+        </div>
+        <div class="detail_container bgm_p-absolute bgm_w-100" *ngIf="gif.showDetail">
+            <div class="bgm_p-1 bgm_p-relative">
+                <div class="detail bgm_p-1">
+                    <div class="bgm_d-flex">
+                        <div>
+                            <p class="bgm_font-sans bgm_font-l bgm_m-0 bgm_m-b-1 bgm_text-capitalize">{{detail.title}}</p>
+                            <div class="bgm_d-flex">
+                                    <div class="bgm_p-relative">
+                                        <img [src]="detail.images.downsized.url" class="pointer bgm_border-black-1"/>                                    
+                                        <div class="bgm_p-absolute favourite bgm_p-1 bgm_bg-white"> 
+                                            <i class="pointer {{detail.favourite ? 'fas fa-heart' : 'far fa-heart'}}" (click)="detail.favourite = !detail.favourite"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+
+                                    <div class="detail_avatar_container bgm_d-flex">
+                                        <div class="image_avatar bgm_m-x-1" *ngIf="detail.user">
+                                                <img [src]="detail.user.avatar_url"/>
+                                        </div>
+                                        <div>
+                                            <div *ngIf="detail.user">
+                                                <p class="bgm_font-sans bgm_font-s">{{detail.user.display_name}}</p>
+                                                <a class="bgm_font-sans bgm_font-s bgm_color-black pointer" [href]="detail.user.profile_url">@{{detail.user.username}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bgm_d-flex bgm_m-x-1">
+                                        <div class="share_container bgm_m-r-1 bgm_m-t-1 bgm_border-black-1 bgm_d-flex bgm_justify-center bgm_align-center pointer">
+                                            <a [href]="shareFacebook(detail.url)" target="_blank">
+                                                <i class="fab fa-facebook-f bgm_color-black"></i>
+                                            </a>
+                                        </div>
+                                        <div class="share_container bgm_m-r-1 bgm_m-t-1 bgm_border-black-1 bgm_d-flex bgm_justify-center bgm_align-center pointer">
+                                            <a [href]="shareTwitter(detail.id)" target="_blank">
+                                                <i class="fab fa-twitter bgm_color-black"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="bgm_p-absolute close bgm_m-0 bgm_font-l bgm-font-ligth pointer" (click)="closeDetail(gif)">X</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bgm_w-100 bgm_d-flex bgm_justify-center">
+        <span (click)="loadMore()" class="more_button"> 
+            More
+        </span>
+    </div>
+
+</div>
